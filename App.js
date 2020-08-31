@@ -7,6 +7,7 @@ import Constants from 'expo-constants';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import WeatherScreen from './screen/WeatherScreen';
+import WindScreen from './screen/WindScreen';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ export default function App() {
      <Stack.Navigator>
        <Stack.Screen name="Home" component={ZipCodeScreen}/>
        <Stack.Screen name="Weather" component={WeatherScreen}/>
+       <Stack.Screen name="Wind" component={WindScreen}/>
      </Stack.Navigator>
    </NavigationContainer>
   );

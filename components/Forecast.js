@@ -1,14 +1,18 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import { TouchableHighlight } from 'react-native-gesture-handler'
+
+
 
 export default function Forecast(props) {
+    
     return (
         <View >
              <Text style={styles.largeText}>{props.main}</Text>
              <Text style={styles.normalText}>{props.description}</Text>
              <Text style={styles.largeText}>{props.temp}<Text style={styles.normalText}>°C</Text></Text>
              <Text style={styles.normalText}>Feels like   <Text style={styles.largeText}>{props.like}</Text>°C</Text>
-             
+              
         </View>
     )
 }
