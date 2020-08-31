@@ -27,7 +27,7 @@ export default function Wind(props){
    }, [props.zipCode] )
     
     return (
-        <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
+        <ImageBackground source={require('../wind_bg.jpg')} style={styles.backdrop}>
             <View style={styles.detail}>
                 <Text style={styles.zipCodeText}>Zip Code is {props.zipCode}.</Text>
                 <WindInfo {...windInfo}/>
@@ -46,9 +46,9 @@ const styles = StyleSheet.create({
     detail: {
         alignItems: 'center',
         width: '100%',
-        height: '65%',
+        height: '45%',
         backgroundColor: 'black',
-        opacity: 0.6,
+        opacity: 0.8,
       
         
     },
