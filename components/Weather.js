@@ -6,7 +6,8 @@ export default function Weather(props){
     const [forecastInfo, setForecastInfo] = useState({
         main: '-',
         description: '-',
-        temp: 0
+        temp: 0,
+        like: 0
     })
 
     useEffect(() => {
@@ -18,7 +19,8 @@ export default function Weather(props){
                     setForecastInfo({
                         main: json.weather[0].main,
                         description: json.weather[0].description,
-                        temp: json.main.temp
+                        temp: json.main.temp,
+                        like: json.main.feels_like
                     });
                 })
                 .catch((error) => {
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
     detail: {
         alignItems: 'center',
         width: '100%',
-        height: '40%',
+        height: '65%',
         backgroundColor: 'black',
         opacity: 0.6,
       
